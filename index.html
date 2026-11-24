@@ -277,6 +277,27 @@ footer { position: relative; z-index: 1; max-width: 1120px; margin: 56px auto 0;
 body{margin:0}
 [hidden]{display:none!important}
 img{max-width:100%}
+
+/* 7HHEP habits */
+.habits { display: flex; flex-direction: column; gap: 18px; margin-top: 56px; }
+.habit { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 20px 40px; padding: 30px; }
+.habit > div { min-width: 0; }
+.habit-num { display: block; font-family: var(--display); font-weight: 800; font-size: 4.2rem; line-height: 1; color: transparent; -webkit-text-stroke: 2px var(--accent); margin-bottom: 10px; }
+.habit h2 { font-size: clamp(1.4rem, 3.2vw, 1.9rem); }
+.habit-body h3 { color: var(--accent); margin-bottom: 12px; }
+.habit-body p { max-width: 64ch; }
+.habit-body p + p { margin-top: 12px; }
+.habit-body .said { color: var(--mute); }
+.tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 18px; }
+.tier { border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--bg2); min-width: 0; }
+.tier .lvl { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--net); }
+.tier svg { display: block; width: 100%; max-width: 150px; height: auto; margin: 10px 0 12px; }
+.tier h4 { font-family: var(--display); font-size: 1.15rem; margin: 0; }
+.tier ul { margin: 10px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; color: var(--mute); font-size: .95rem; }
+.bubbles { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.bubble { margin: 0; max-width: min(100%, 400px); padding: 12px 16px; border-radius: 16px 16px 16px 4px; background: var(--bg2); border: 1px solid var(--line); }
+.bubble:nth-child(even) { align-self: flex-end; border-radius: 16px 16px 4px 16px; border-color: color-mix(in srgb, var(--net) 55%, var(--line)); }
+@media (max-width: 820px) { .habit { grid-template-columns: minmax(0, 1fr); padding: 22px; } .habit-num { font-size: 3.2rem; } }
 </style>
 
 
@@ -439,7 +460,7 @@ img{max-width:100%}
         <div>
           <p class="eyebrow">Section</p>
           <div class="big" aria-label="7HHEP">7HHEP</div>
-          <p class="lead">This space is reserved for 7HHEP. The full story is on its way.</p>
+          <p class="lead">Six habits from <em>The 7 Habits of Highly Effective People</em> by Stephen R. Covey, each with an example from my own life.</p>
         </div>
         <div class="orbit" aria-hidden="true">
           <svg viewBox="0 0 260 260"><circle class="ring" cx="130" cy="130" r="40"/><circle class="ring" cx="130" cy="130" r="82"/><circle class="ring" cx="130" cy="130" r="122"/>
@@ -448,6 +469,32 @@ img{max-width:100%}
             <g class="spin rev"><circle cx="130" cy="8" r="6" fill="var(--accent)"/></g>
             <g class="spin" style="animation-duration:9s"><circle cx="90" cy="130" r="4" fill="var(--net)"/></g></svg>
         </div>
+      </div>
+      <div class="habits">
+      <article class="habit panel" id="habit-1">
+        <div class="habit-side"><span class="habit-num" aria-hidden="true">1</span><p class="eyebrow">Habit 1</p><h2>Be proactive</h2></div>
+        <div class="habit-body"><h3>An example of proactivity in my life</h3><p>I am proactive when my parents need help with technology. For example, I help them when they have problems with the TV or other electronic devices. I try to find a solution and help them without waiting for someone else to do it.</p></div>
+      </article>
+      <article class="habit panel" id="habit-2">
+        <div class="habit-side"><span class="habit-num" aria-hidden="true">2</span><p class="eyebrow">Habit 2</p><h2>Begin with the end in mind</h2></div>
+        <div class="habit-body"><h3>My Mission Statement</h3><p>My mission is to become an independent person, achieve financial stability, enjoy life and have new experiences with my friends. I also want to learn from my mistakes, improve as a person and share my knowledge with my family and friends, always keeping the people I care about close to me.</p></div>
+      </article>
+      <article class="habit panel" id="habit-3">
+        <div class="habit-side"><span class="habit-num" aria-hidden="true">3</span><p class="eyebrow">Habit 3</p><h2>First things first</h2></div>
+        <div class="habit-body"><h3>My classification of priorities</h3><p>I organize my priorities into three levels: rocks, pebbles and sand.</p><div class="tiers"><div class="tier"><span class="mono lvl">High priorities</span><svg viewBox="0 0 120 52" aria-hidden="true"><ellipse cx="26" cy="30" rx="22" ry="16" fill="var(--accent)"/><ellipse cx="68" cy="32" rx="20" ry="14" fill="var(--accent)" opacity=".85"/><ellipse cx="102" cy="29" rx="16" ry="17" fill="var(--accent)" opacity=".7"/></svg><h4>Rocks</h4><ul><li>My family and spending time with them.</li><li>My studies and my future.</li><li>Going to the gym and taking care of my health.</li><li>My personal goals and becoming independent.</li></ul></div><div class="tier"><span class="mono lvl">Medium priorities</span><svg viewBox="0 0 120 52" aria-hidden="true"><circle cx="12" cy="34" r="8" fill="var(--net)" opacity="0.95"/><circle cx="30" cy="26" r="8" fill="var(--net)" opacity="0.88"/><circle cx="46" cy="36" r="8" fill="var(--net)" opacity="0.81"/><circle cx="62" cy="24" r="8" fill="var(--net)" opacity="0.74"/><circle cx="78" cy="35" r="8" fill="var(--net)" opacity="0.67"/><circle cx="94" cy="27" r="8" fill="var(--net)" opacity="0.60"/><circle cx="110" cy="35" r="8" fill="var(--net)" opacity="0.53"/></svg><h4>Pebbles</h4><ul><li>Spending time with my friends.</li><li>Playing basketball.</li><li>Learning new things and improving my skills.</li><li>Having new experiences.</li></ul></div><div class="tier"><span class="mono lvl">Low priorities</span><svg viewBox="0 0 120 52" aria-hidden="true"><circle cx="45" cy="23" r="1.8" fill="var(--mute)"/><circle cx="54" cy="17" r="1.8" fill="var(--mute)"/><circle cx="13" cy="20" r="1.8" fill="var(--mute)"/><circle cx="50" cy="17" r="1.8" fill="var(--mute)"/><circle cx="68" cy="27" r="1.8" fill="var(--mute)"/><circle cx="8" cy="19" r="1.8" fill="var(--mute)"/><circle cx="59" cy="40" r="1.8" fill="var(--mute)"/><circle cx="12" cy="29" r="1.8" fill="var(--mute)"/><circle cx="15" cy="41" r="1.8" fill="var(--mute)"/><circle cx="11" cy="21" r="1.8" fill="var(--mute)"/><circle cx="32" cy="17" r="1.8" fill="var(--mute)"/><circle cx="77" cy="39" r="1.8" fill="var(--mute)"/><circle cx="10" cy="28" r="1.8" fill="var(--mute)"/><circle cx="9" cy="22" r="1.8" fill="var(--mute)"/><circle cx="41" cy="40" r="1.8" fill="var(--mute)"/><circle cx="22" cy="21" r="1.8" fill="var(--mute)"/><circle cx="77" cy="33" r="1.8" fill="var(--mute)"/><circle cx="75" cy="25" r="1.8" fill="var(--mute)"/><circle cx="17" cy="26" r="1.8" fill="var(--mute)"/><circle cx="51" cy="20" r="1.8" fill="var(--mute)"/><circle cx="74" cy="18" r="1.8" fill="var(--mute)"/><circle cx="76" cy="17" r="1.8" fill="var(--mute)"/><circle cx="83" cy="27" r="1.8" fill="var(--mute)"/><circle cx="67" cy="41" r="1.8" fill="var(--mute)"/><circle cx="103" cy="34" r="1.8" fill="var(--mute)"/><circle cx="63" cy="43" r="1.8" fill="var(--mute)"/><circle cx="50" cy="33" r="1.8" fill="var(--mute)"/><circle cx="35" cy="25" r="1.8" fill="var(--mute)"/><circle cx="93" cy="29" r="1.8" fill="var(--mute)"/><circle cx="14" cy="33" r="1.8" fill="var(--mute)"/><circle cx="71" cy="45" r="1.8" fill="var(--mute)"/><circle cx="116" cy="35" r="1.8" fill="var(--mute)"/><circle cx="97" cy="42" r="1.8" fill="var(--mute)"/><circle cx="40" cy="18" r="1.8" fill="var(--mute)"/><circle cx="19" cy="46" r="1.8" fill="var(--mute)"/><circle cx="57" cy="24" r="1.8" fill="var(--mute)"/><circle cx="100" cy="35" r="1.8" fill="var(--mute)"/><circle cx="23" cy="45" r="1.8" fill="var(--mute)"/><circle cx="57" cy="16" r="1.8" fill="var(--mute)"/><circle cx="89" cy="18" r="1.8" fill="var(--mute)"/><circle cx="101" cy="34" r="1.8" fill="var(--mute)"/><circle cx="47" cy="36" r="1.8" fill="var(--mute)"/><circle cx="80" cy="45" r="1.8" fill="var(--mute)"/><circle cx="78" cy="43" r="1.8" fill="var(--mute)"/><circle cx="12" cy="19" r="1.8" fill="var(--mute)"/><circle cx="38" cy="44" r="1.8" fill="var(--mute)"/></svg><h4>Sand</h4><ul><li>Spending too much time on social media.</li><li>Using my phone without any important reason.</li><li>Playing video games for too long.</li><li>Doing things that waste my time.</li></ul></div></div></div>
+      </article>
+      <article class="habit panel" id="habit-4">
+        <div class="habit-side"><span class="habit-num" aria-hidden="true">4</span><p class="eyebrow">Habit 4</p><h2>Think win-win</h2></div>
+        <div class="habit-body"><h3>An example of a win-win situation in my life</h3><p>When I used to play basketball, sometimes I changed the player I was defending with one of my teammates. For example, if the player I was defending was taller and stronger than me, I asked a teammate if we could switch opponents because he was better suited to defend that player. This made things easier for both of us and helped the team defend better. We both benefited from the change.</p></div>
+      </article>
+      <article class="habit panel" id="habit-5">
+        <div class="habit-side"><span class="habit-num" aria-hidden="true">5</span><p class="eyebrow">Habit 5</p><h2>Seek first to understand, then to be understood</h2></div>
+        <div class="habit-body"><h3>Empathetic phrases</h3><p>When I used to play basketball, sometimes my teammates made mistakes during games. Instead of getting angry or blaming them, we tried to understand and encourage each other. They also supported me when I didn’t feel comfortable or confident during a game. This made me feel understood and helped me feel better.</p><p class="said">Some empathetic phrases we said to each other were:</p><div class="bubbles"><blockquote class="bubble">“Don’t worry, next time you’ll do better.”</blockquote><blockquote class="bubble">“It’s okay, mistakes happen.”</blockquote><blockquote class="bubble">“Keep going, we’re a team.”</blockquote><blockquote class="bubble">“Don’t give up, we’re here for you.”</blockquote><blockquote class="bubble">“You can do it, believe in yourself.”</blockquote></div></div>
+      </article>
+      <article class="habit panel" id="habit-6">
+        <div class="habit-side"><span class="habit-num" aria-hidden="true">6</span><p class="eyebrow">Habit 6</p><h2>Synergize</h2></div>
+        <div class="habit-body"><h3>An example of synergy in my life</h3><p>When I used to play basketball, there was sometimes someone who wanted to play individually instead of working with the team. However, after seeing that everyone else was passing the ball and playing together, he eventually understood and started cooperating with the rest of the team. This showed me that working together and helping each other is better than playing alone.</p></div>
+      </article>
       </div>
     </section>
 
